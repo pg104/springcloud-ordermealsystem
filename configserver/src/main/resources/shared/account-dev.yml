@@ -1,0 +1,19 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: account
+  datasource:
+    name: ordermealsystem
+    url: jdbc:mysql://localhost:3306/ordermealsystem?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 88888888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.pg.entity
